@@ -1,0 +1,507 @@
+body {
+    font-family: $font-montserrat;
+    max-width: 1440px;
+    margin: auto;
+    color: $color-principal;
+    *,*:focus,*:hover{
+        outline:none;
+    }
+}
+
+//// GENERALES
+.activeFav{
+    background-color: white;
+}
+
+//HEADER //////////////////////////////////////@at-root
+
+header {
+    .line {
+        height: 5px;
+        background-color: $color-principal;
+    }
+
+    .header_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 6% 5.9% 2%;
+        height: 2.6%;
+    
+
+        .logo {
+            height: 15vw;
+        }
+    
+        nav {
+            width: 7.5%;
+            margin: 5% 0;
+            ul {
+                
+                display: none;
+                position: absolute;
+                background: $color-principal;
+                height: 100vh;
+                left: 0px;
+                top: 25vw;
+                padding-top: 10vw;
+                opacity: 90%;
+                z-index: 3;
+
+
+
+                li {
+                    
+                    list-style: none;
+                    height: 2em;
+                    margin-top: 1.5em;
+                    text-align: center;
+                    font-size: 15px;
+
+                    
+                    
+                    
+                    a {
+                        color: $color-white;
+                        text-decoration: none;
+                        font-size: 15px;
+                    }
+                }
+
+                .underline {
+                    height: 1px;
+                    margin: 0 159px;
+                    text-align: center;
+                    background-color: $color-white;
+
+                }
+            }
+            
+            .menu_x {
+                display: none;
+            }
+            
+            input:checked  ~ ul {
+                display:block;
+                position: absolute;
+                right: 0;
+            }
+            
+            input:checked  ~ .menu_x {
+                display: list-item;
+                list-style: none;
+            }
+
+            input:checked  ~ .menu_h {
+                display: none;
+            }
+
+            input {
+                display: none;
+            }
+
+            label {
+                box-sizing: border-box;
+                display: inline-block;
+                text-align: center;
+                user-select: none;
+                color: $color-principal;
+                cursor: pointer;
+
+                i{
+                    font-size: 6vw;
+                }
+            }
+        }
+    }
+
+}
+
+// MAIN /////////////////////////////////////////
+
+main {
+
+    // SEARCH /////////////////////
+    .search{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h1 {
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+            margin: 5% 12%;
+            span {
+                color: $color-secondary;
+            }
+        }
+
+
+        //BROWSER /////////////////////////////////
+        .browser{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            align-items: center;
+            margin: 2%;
+            .people {
+                width: 77%;
+           
+                
+            }
+
+            .icon_browser{
+                width: 100%;
+                
+                .wrapper {
+                    position: relative;
+                    //max-width: 450px;
+                    margin: 0 auto;
+
+
+                    .search_input {
+                        width: 100%;
+                        border-radius: 27px;
+                        border: solid 1px $color-principal;
+    
+                        input {
+                            height: 55px;
+                            border: none;
+                            padding: 0 0 0 40px;
+                            font-size: 16px;
+                            border-radius: 27px;
+                            font-family: $font-roboto;
+                            width: 80%;
+                           
+
+                            &::placeholder{
+                                color: $color-terciary;
+                                font-size: 16px;
+                                font-family: $font-roboto;
+                                position: relative;
+                                left: 0;
+                            }
+                        }
+    
+                        .lupa {
+                            height: 55px;
+                            width: 20px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            text-align: center;
+                            padding-right: 15px;
+                        }
+    
+                        .close {
+                            display: none;
+                            height: 55px;
+                            width: 15px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            text-align: center;
+                            padding-right: 15px;
+                        }
+                        
+                        .autocomplet-box {
+                            max-height: 280px;
+                            overflow-y: auto;
+                            opacity: 0;
+                            pointer-events: 0;
+                            margin: 0;
+
+                            li {
+                                display: none;
+                                list-style: none;
+                                padding: 8px 12px;
+                                cursor: default;
+                                border-radius: 3px;
+                                opacity: 0.5;
+                                
+                                
+                                &:hover {
+                                    background-color: #d8c3c3;
+                                }
+
+                                a {
+                                    padding-left: 10px;
+                                    color: $color-fifth;
+                                    text-decoration: none;
+                                }
+
+                                .lupaSug {
+                                    color: $color-fifth;
+                                }
+                            }
+                        }
+                    }
+                    .search_input {
+                        &.active {
+                            input{
+                                background:linear-gradient($color-fifth,$color-fifth) bottom no-repeat;
+                                background-size:100% 1px;
+                                
+                            }
+                            .autocomplet-box{
+                                padding: 10px 8px;
+                                opacity: 1;
+                                pointer-events: auto;
+
+                                li{
+                                    display: flex;
+                                    align-items: center;
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        //TRENDING //////////////////////////////////
+        .trending {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 7% 5% 10%;
+
+            h3 {
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            p {
+                text-align: center;
+                margin: 5% 15%;
+                font-size: 14px;
+                
+            }
+            
+        }
+    }
+
+
+    ////////// RESULTS SEACRH///// JS/////////**************************
+
+
+    #results {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        #titleSearch {
+            display: none;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            #lineTitle{
+                height: 1px;
+                background-color: $color-fifth;
+                width: 29%;
+                margin-bottom: 10%;
+
+                
+            }
+
+            h2 {
+                font-weight: bold;
+                font-size: 150%;
+                margin-bottom: 6%;
+                text-transform: uppercase;
+            }
+        }
+
+        .gifosGrid {
+            display: grid;
+            grid-template-columns:  20fr  20fr;
+            margin: 5%;
+            
+            .gifos {
+                
+                
+                .icons_gifos { 
+                    display: none;
+                }
+
+                img{
+                    margin: 5%;
+                    width: 90%;
+                    height: 90%;
+                }
+    
+                .user{
+                    display: none;
+                }
+            }
+
+
+            
+        }
+
+        input {
+            display: none;
+            border: 1px solid $color-principal;
+            border-radius: 25px;
+            height: 50px;
+            width: 100px;
+            background-color: $color-white;
+            font-weight: bold;
+            font-size: 13px;
+            color:$color-principal;
+            cursor: pointer;
+            margin: 2% 0 5%;
+            
+
+            &:hover{
+                background-color: $color-principal;
+                color:$color-white;
+            }
+            
+        }
+
+    }
+
+        ////////// ERROR SEARCH///// JS/////////**************************
+    #errorSearch {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
+
+        p {
+            margin: 10% 0 20% 0;
+            width: 50vw;
+            text-align: center;
+            font-size: 22px;
+            color: $color-secondary;
+            font-weight: bold;
+        }
+    }
+
+    
+
+    //TRENDING GIFOS ////////////////@at-root
+    .trending_gifos {
+        background-color: $color-fourth;
+        padding: 15% 0 25%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        .title {
+            h2{
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            p{
+                color: $color-black;
+                font-family: $font-roboto;
+                font-size: 16px;
+                text-align: center;
+                margin: 6% 0 15%;
+            }
+        }
+
+
+        .preview_gifos {
+            
+            .slider_gifos {
+                
+
+                
+                .arrow {display: none;
+   
+                }
+
+                .gifos_carrousel{
+                    display: flex;
+                    justify-content: flex-start;
+                    height: 300px;
+
+ 
+                      
+                    .gifos {
+                  
+                        margin: 0 5%;
+
+                        .icons_gifos {
+                            display: none;
+                        }
+
+                        .gif {
+                            width: 70vw;
+                            max-width: 400px;
+                            height: 100%;
+                            
+                        }
+
+                        .user {
+                            display: none;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+//FOOTER///////////////////////////
+
+footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15% 10% 5%;
+    font-family: $font-roboto;
+    color: $color-black;
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        p {
+            font-size: 15px;
+        }
+
+        .social_icons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20% 0 30%;
+            width: 100%;
+    
+        
+        
+
+
+
+        }
+
+    }
+
+    p {
+        font-size: 14px;
+        text-align: center;
+        }
+}
+
+.line {
+    width: 100%;
+    height: 5px;
+    background-color: $color-principal;
+}

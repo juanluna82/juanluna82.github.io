@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto GIFOS</title>
+
+    <link id="noc_mode" rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="line"></div>
+        <div class="header_nav">
+            <a href="index.html">
+                <img src="assets/logo-mobile.svg" alt="LOGO" class="logo" id="logo">
+            </a>
+
+
+            <nav class="navBar">
+                <input type="checkbox" id="menu">
+                <label id="burger" class="menu_h" for="menu"><i class="fas fa-bars"></i></label>
+                <label class="menu_x" for="menu"><i class="fas fa-times"></i></label>
+
+                <ul>
+                    <li><a id="click_mn" href="#">Modo Nocturno</a>
+                        <div class="underline"></div>
+                    </li>
+                    
+                    <li><a href="#" id="linkFav">Favoritos</a>
+                        <div class="underline"></div>
+                    </li>
+                    
+                    <li><a href="mis_gifos.html">Mis GIFOS</a></li>
+                    <li><a href="create_gifos.html"><img id="create" src="assets/button-crear-gifo.svg" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main id="main">
+
+
+        <div class="search"> </div>
+        <div class="trending_gifos">
+
+            <div class="title">
+                <h2>Trending GIFOS</h2>
+                <p>Mira los últimos <br> GIFO de nuestra comunidad.</p>
+            </div>
+
+            <div class="preview_gifos">
+                <div class="slider_gifos">
+                    <img class="arrow left" src="assets/button-slider-left.svg" alt="">
+                    <div class="gifos_carrousel">
+                        <div class="gifos">
+                            <div class="icons_gifos">
+                                <img class="fav icons" id="fav1" src="assets/icon-fav.svg" alt="">
+                                <img class="downS icons" src="assets/icon-download.svg" alt="">
+                                <img class="maxS icons" src="assets/icon-max-normal.svg" alt="">
+
+                            </div>
+                            <img class="gif" id="gif1" src="https://picsum.photos/200/200" alt="">
+                            <div class="user">
+                                <h2 id="h21">User</h2>
+                                <p id="p1">Titulo gifos</p>
+                            </div>
+
+                        </div>
+                        <div class="gifos">
+                            <div class="icons_gifos">
+                                <img class="fav icons" id="fav2" src="assets/icon-fav.svg" alt="">
+                                <img class="downS icons" src="assets/icon-download.svg" alt="">
+                                <img class="maxS icons" src="assets/icon-max-normal.svg" alt="">
+                            </div>
+                            <img class="gif" id="gif2" src="https://picsum.photos/200/200" alt="">
+                            <div class="user">
+                                <h2 id="h22">User</h2>
+                                <p id="p2">Titulo gifos</p>
+                            </div>
+                        </div>
+
+                        <div class="gifos">
+                            <div class="icons_gifos">
+                                <img class="fav icons" id="fav3" src="assets/icon-fav.svg" alt="">
+                                <img class="downS icons" src="assets/icon-download.svg" alt="">
+                                <img class="maxS icons" src="assets/icon-max-normal.svg" alt="">
+                            </div>
+                            <img class="gif" id="gif3" src="#" alt="">
+                            <div class="user">
+                                <h2 id="h23">User</h2>
+                                <p id="p3">Titulo gifos</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <img class="arrow right" src="assets/button-slider-right.svg" alt="">
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="social">
+            <p>Compartir en:</p>
+
+            <div class="social_icons">
+                <a href="https://facebook.com" target="_blank"><img class="social_normal" id="facebook"
+                        src="assets/icon_facebook.svg" alt="#"></a>
+
+                <a href="https://twitter.com" target="_blank"><img id="twitter" class="social_normal"
+                        src="assets/icon-twitter.svg" alt="#"></a>
+
+                <a href="https://instagram.com" target="_blank"><img id="instagram" class="social_normal"
+                        src="assets/icon_instagram.svg" alt="#"></a>
+
+
+
+            </div>
+
+
+        </div>
+        <p>© GIFOS 2020 All Rights Reserved.</p>
+
+    </footer>
+    <div class="line"></div>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/gifos_search.js"></script>
+    <script src="js/carrousel.js"></script>
+    <script src="js/favourites.js"></script>
+
+</body>
+
+</html>

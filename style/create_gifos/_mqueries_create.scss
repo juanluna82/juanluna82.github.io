@@ -1,0 +1,99 @@
+@media screen and (min-width: 800px) {
+
+    //HEADER /////////////////////////////@at-root
+    
+    header {
+        .header_nav {
+           height: unset;
+           margin: 2% 2%;
+
+           .logo{
+               height: 5vw;
+           }
+            nav {
+                width: 50%;
+                margin: unset;
+                input {
+                    display: none;
+                }
+                label {
+                    display: none;
+                }
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: unset;
+                    background-color: unset;
+                    position: unset;
+                    padding-top: unset;
+                    opacity: unset;
+                    left: unset;
+                    top: unset;
+
+
+
+
+                    li{
+                        height: auto;
+                        margin-top: unset;
+                        a {
+                            color: $color-principal;
+                            font-weight: bold;
+                            font-size: 13px;
+                            text-transform: uppercase;
+                            &:hover {
+
+                                padding-bottom: 5px ; 
+                                border-bottom: solid $color-underline; 
+                                border-bottom-width: 3.1px; 
+                                width: fit-content; 
+                            }
+                            &:active {
+                                color:$color-fifth;
+                                border-bottom: none;
+                            }
+                        }
+                    }
+
+                    .underline {
+                        display: none;
+                    }
+                 
+                }
+
+            }
+        }    
+    }
+
+    
+    // MAIN /////////////////////////////////////////
+    
+    main {
+    
+        // SEARCH /////////////////////
+        .search {
+    
+            h1 {
+                font-size: 35px;
+            }
+        }
+    
+        //BROWSER /////////////////////////////////
+        .browser {
+            width: 60%;
+            
+            .icon_browser {
+                width: 100%;
+                input {
+                    &::placeholder {
+                        color: $color-fifth;
+                        left: 0;
+                    } 
+                }
+    
+            }
+        }
+
+    }
+}

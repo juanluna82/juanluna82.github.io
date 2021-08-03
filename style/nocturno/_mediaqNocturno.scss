@@ -1,0 +1,370 @@
+@media screen and (min-width: 800px) {
+
+    //HEADER /////////////////////////////
+    
+        header {
+            .header_nav {
+               //margin: unset;
+               height: unset;
+               margin: 2% 2%;
+    
+               .logo{
+                   height: 5vw;
+               }
+                nav {
+                    width: 50%;
+                    margin: unset;
+                    input {
+                        display: none;
+                    }
+                    label {
+                        display: none;
+                    }
+                    ul {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        height: unset;
+                        background-color: unset;
+                        position: unset;
+                        padding-top: unset;
+                        opacity: unset;
+                        left: unset;
+                        top: unset;
+    
+    
+                        li{
+                            height: auto;
+                            margin-top: unset;
+                            a {
+                                
+                                font-weight: bold;
+                                font-size: 13px;
+                                text-transform: uppercase;
+
+                                &:hover {
+
+                                    padding-bottom: 5px ; 
+                                    border-bottom: solid $color-underline; 
+                                    border-bottom-width: 3.1px; 
+                                    width: fit-content; 
+                                }
+                                &:active {
+                                    color:$color-fifth;
+                                    border-bottom: none;
+                                }
+
+                            }
+                        }
+    
+                        .underline {
+                            display: none;
+                        }
+                     
+                    }
+    
+                }
+            }    
+        }
+    
+            // MAIN /////////////////////////////////////////
+    
+        main {
+    
+            // SEARCH /////////////////////
+            .search {
+    
+                h1 {
+                    font-size: 35px;
+                }
+            
+    
+                //BROWSER /////////////////////////////////
+                .browser {
+                    width: 60%;
+                    
+                    .icon_browser {
+                        width: 100%;
+                        input {
+                            &::placeholder {
+                                color: $color-fifth;
+                            } 
+                        }
+                    }
+                }
+    
+                //TRENDING //////////////////////////////////
+    
+                .trending {
+                    margin: unset;
+                    margin: 2% 0 5% 0;
+                    h3 {
+                        font-size: 18px;
+                                        }
+                    p {
+                        font-size: 16px;
+                        margin: 5% 0;
+                    }
+                }
+            }
+
+             ////////// RESULTS SEACRH///// JS/////////**************************
+
+    #results {
+        
+        
+        #titleSearch {
+            margin-top: 7%;
+            width: 100%;
+
+            #lineTitle{
+                margin-bottom: 5%;
+            }
+
+
+            h2 {
+                font-weight: bold;
+                font-size: 25px;
+                margin-bottom: unset;
+                
+            }
+        }
+
+        .gifosGrid {
+            width: 90%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+
+
+            
+
+            .gifos {
+ 
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                position: relative;
+                margin: auto;
+                width: 100%;
+                
+                &:hover {
+                    background-color: $color-principal;
+                    z-index: 3;
+                    opacity: 0.7;
+                }
+
+                &:hover .user{
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    padding: 0 0 10% 10%;
+                    color: $color-white;
+                    font-family: $font-roboto;
+                    z-index: 2;
+
+
+                    h2 {
+                        font-size: 15px;
+                        padding-bottom: 10%;
+                        
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: bold;
+                        
+                    }
+
+                }
+
+                &:hover .icons_gifos {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: flex;
+                    padding: 2%;
+                    width: 40%;
+                    z-index: 4;
+                    
+
+                    a {
+                        padding: 3%;
+                        z-index: 0;
+                        
+                    }
+
+                                      
+                }
+
+                &:hover .gif {
+                    opacity: 0.3;
+                }
+
+                .gif {
+                    grid-column: 1/5;
+                    grid-row: 0/3;
+                    width: 100%;
+                    max-width: unset;
+                    height: 200px;
+                    margin: unset;
+                    z-index: -1;
+
+                }
+            }
+            
+        }
+
+        input {
+            width: 15%;
+            
+        }
+    }
+
+    
+            //TRENDING GIFOS ////////////////
+            .trending_gifos{
+                padding: 5% 0 15%;
+    
+                .title {
+                    h2 {
+                        font-size: 25px;
+    
+                    }
+                    p{
+                        font-size: 18px;
+                        margin: 2% 0 5%;
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+    
+                .preview_gifos {
+                
+                    .slider_gifos {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        
+                        
+                        .arrow {
+                            display: block;
+                            margin: 0 2%;
+           
+                        }
+        
+                        .gifos_carrousel{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            
+    
+                              
+                            .gifos {
+                                position: relative;
+                                margin: 0 1%;
+                                width: 50%;
+                                
+                                &:hover {
+                                    background-color: $color-principal;
+                                    z-index: 3;
+                                    opacity: 0.7;
+                                }
+    
+                                &:hover .user{
+                                    display: block;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    padding: 0 0 10% 10%;
+                                    color: $color-white;
+                                    font-family: $font-roboto;
+                                    z-index: 2;
+    
+    
+                                    h2 {
+                                        font-size: 15px;
+                                        padding-bottom: 10%;
+                                        
+                                    }
+    
+                                    p {
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                        
+                                    }
+    
+                                }
+    
+                                &:hover .icons_gifos {
+                                    position: absolute;
+                                    right: 10px;
+                                    top: 0;
+                                    display: flex;
+                                    padding: 2%;
+                                    padding-right: 5%;
+                                    //width: 40%;
+                                    z-index: 400;
+                                    
+    
+                                    img {
+                                        padding: 3%;
+                                        z-index: 0;
+                                        
+                                    }
+    
+                                                      
+                                }
+    
+                                &:hover .gif {
+                                    opacity: 0.3;
+                                }
+    
+                                .gif {
+                                    width: 100%;
+                                    //max-width: unset;
+                                    height: 25vw;
+                                    z-index: -1;
+    
+                                }
+                            }
+                            
+                        }
+                    }
+                }    
+    
+    
+                
+            }
+    
+        }
+    
+        //FOOTER//////////////////////
+    
+        footer {
+            flex-direction: row;
+            padding: 2% 15%;
+            font-size: 13px;
+    
+            .social {
+                flex-direction: row;
+                justify-content: flex-start;
+                width: 50%;
+                font-size: 13px;
+    
+    
+                p{
+                    width: 100px;
+                    padding-right: 5%;
+                }
+                .social_icons {
+                    margin: unset;
+                    width: 30%;
+                }
+            }
+    
+        }
+    }
+    
+    
